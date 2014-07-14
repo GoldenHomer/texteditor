@@ -3,8 +3,7 @@
 <head>
     <title>Text editor</title>
     <link rel="stylesheet" href="editor.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
-    <script src="editor.jsi"></script>
+    <script src="editor.js"></script>
     <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
     <script>
@@ -14,16 +13,16 @@
         });
     </script>
 </head>
-<body onload="">
+<body onload="edit()">
     <!-- Buttons -->
     <div id="draggable" class="ui-widget-content">
-        <input type="button" value="b" id="bold" >
-        <input type="button" value="i" id="italic">
-        <input type="button" value="u" id="underline">
+        <input type="button" onClick="bold()" value="B" id="bold" >
+        <input type="button" onClick="italic()" value="I" id="italic">
+        <input type="button" onClick="underline()" value="U" id="underline">
     </div>
     <!-- Text area -->
-    <textarea name="text1" class="text" id="text1">Ut ancillae temporibus instructior ius. Nec harum minimum reprimique in, eam ut blandit consequuntur. Eam mandamus signiferumque ut. Facete tincidunt eum ei, an usu mollis ceteros, an qui ludus intellegam. Ei error movet per, agam ignota ne per. Ius ea aliquid apeirian.</textarea>
-    <textarea name="text2" class="text" id="text2">Te quot delenit qui. An delicata ocurreret assentior sea. Ius id semper petentium vituperatoribus. Duo homero omittam qualisque at, adhuc ullamcorper ne eum.</textarea>
+    <textarea name="text1" class="text" id="text1" rows="4" cols="50">Ut ancillae temporibus instructior ius. Nec harum minimum reprimique in, eam ut blandit consequuntur. Eam mandamus signiferumque ut. Facete tincidunt eum ei, an usu mollis ceteros, an qui ludus intellegam. Ei error movet per, agam ignota ne per. Ius ea aliquid apeirian.</textarea><br>
+    <textarea name="text2" class="text" id="text2">Te quot delenit qui. An delicata ocurreret assentior sea. Ius id semper petentium vituperatoribus. Duo homero omittam qualisque at, adhuc ullamcorper ne eum.</textarea><br>
     <textarea name="text3" class="text" id="text3">Per eu agam dicam feugiat. Zril dicam et mel, mei natum virtute ponderum te. Ea vix mucius persecuti, his doctus audire maiestatis ei. Atomorum evertitur neglegentur ad mel, vim patrioque democritum an.</textarea>
 </body>
 </html>

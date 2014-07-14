@@ -23,5 +23,9 @@
 .text{
   height: 150px;
   width: 225px;
+  display: block;
+  float: right;
+  clear: both;
   resize: none;
+  margin: 5px
 }
