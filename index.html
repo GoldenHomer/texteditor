@@ -3,8 +3,9 @@
 <head>
     <title>Text editor</title>
     <link rel="stylesheet" href="editor.css">
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
     <script>
         $(function(){
             $("#draggable").draggable();
@@ -13,10 +14,10 @@
 </head>
 <body>
     <!-- Buttons -->
-    <div id="draggable" class="btns">
-    <input type="button" value="b" id="bold" >
-    <input type="button" value="i" id="italic">
-    <input type="button" value="u" id="underline">
+    <div id="draggable" class="ui-widget-content">
+        <input type="button" value="b" id="bold" >
+        <input type="button" value="i" id="italic">
+        <input type="button" value="u" id="underline">
     </div>
     <!-- Text area -->
     <textarea class="text" id="text1"></textarea>
