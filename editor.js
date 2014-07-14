@@ -1,33 +1,14 @@
-function getSelectionHtml() {
-    var html = "";
-    if (typeof window.getSelection != "undefined") {
-        var sel = window.getSelection();
-        if (sel.rangeCount) {
-            var container = document.createElement("div");
-            for (var i = 0, len = sel.rangeCount; i < len; ++i) {
-                container.appendChild(sel.getRangeAt(i).cloneContents());
-            }
-            html = container.innerHTML;
-        }
-    } 
+var buttons = document.getElementsByTagName("img");
 
-    else if (typeof document.selection != "undefined") {
-        if (document.selection.type == "Text") {
-            html = document.selection.createRange().htmlText;
-        }
-    }
-}
+setInterval(function () {
+    var isBold = document.queryCommandState("Bold");
+    var isItalic = document.queryCommandState("Italic");
+    var isUnderline = document.queryCommandState("Underline");
 
+    isBold ? buttons[0].style.opacity = 1 : buttons[0].style.opacity = 0.5;
+    
+    isItalic ? buttons[1].style.opacity = 1 : buttons[1].style.opacity = 0.5;
 
-function bold () {
-	getSelectionHtml();
-	html.setAttribute("id","bold");
-}
-
-function italic (){
-	text1.document.execCommand("italic",false,null);
-}
-
-function underline () {
-	text1.document.execCommand("underline",false,null);
-}
+    isUnderline ? buttons[2].style.opacity = 1 : buttons[2].style.opacity = 0.5;
+    
+}, 100)

@@ -1,32 +1,19 @@
-#active{
-  background-color: grey;
-}
-
-#bold{
-  font-weight: bold;
-}
-
-#italic{
-  font-style: italic;
-}
-
-#underline{
-  text-decoration: underline;
-}
-
 #draggable{
-  border-style: solid;
-  border-width: 1px;
-  float: left;
-  padding: 10px;
+  	border-style: solid;
+  	border-width: 1px;
+  	float: left;
+  	padding: 10px;
+}
+
+img {
+	width: 25px;
+	height: 25px;
 }
 
 .text{
-  height: 150px;
-  width: 225px;
-  display: block;
-  float: right;
-  clear: both;
-  resize: none;
-  margin: 5px
+  	max-width: 50%;
+  	float: right;
+  	margin: 10px;
+  	border-style: solid;
+  	border-width: 1px;
 }
