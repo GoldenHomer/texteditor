@@ -16,6 +16,12 @@
 
 .text{
   display: inline-block;
-  float: left;
+  float: right;
   resize: none;
+}
+
+#btns{
+  border-style: solid;
+  border-width: 1px;
+  float: left;
 }
