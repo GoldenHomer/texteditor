@@ -3,20 +3,24 @@
 <head>
     <title>Text editor</title>
     <link rel="stylesheet" href="editor.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+    <script>
+        $(function(){
+            $("#draggable").draggable();
+        });
+    </script>
 </head>
 <body>
     <!-- Buttons -->
-    <div id="btns">
+    <div id="draggable" class="btns">
     <input type="button" value="b" id="bold" >
     <input type="button" value="i" id="italic">
     <input type="button" value="u" id="underline">
     </div>
     <!-- Text area -->
-    <textarea class="text" id="text1"></textarea><br>
-    <textarea class="text" id="text2"></textarea><br>
-    <textarea class="text" id="text3"></textarea><br>
-    <!-- Empty div to put the text in -->
-    <div id="view_text">
-    </div>
+    <textarea class="text" id="text1"></textarea>
+    <textarea class="text" id="text2"></textarea>
+    <textarea class="text" id="text3"></textarea>
 </body>
 </html>
