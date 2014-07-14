@@ -1,11 +1,27 @@
-//JS execCommand. 2nd parameter is to show a UI; 3rd is for an extra value argument (null since no such argument is needed)
-function edit () {
-	text1.document.designMode = "On";
+function getSelectionHtml() {
+    var html = "";
+    if (typeof window.getSelection != "undefined") {
+        var sel = window.getSelection();
+        if (sel.rangeCount) {
+            var container = document.createElement("div");
+            for (var i = 0, len = sel.rangeCount; i < len; ++i) {
+                container.appendChild(sel.getRangeAt(i).cloneContents());
+            }
+            html = container.innerHTML;
+        }
+    } 
+
+    else if (typeof document.selection != "undefined") {
+        if (document.selection.type == "Text") {
+            html = document.selection.createRange().htmlText;
+        }
+    }
 }
 
 
 function bold () {
-	text1.document.execCommand("bold",false,null);
+	getSelectionHtml();
+	html.setAttribute("id","bold");
 }
 
 function italic (){
